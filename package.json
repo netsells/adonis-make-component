@@ -1,0 +1,16 @@
+{
+  "name": "@netsells/adonis-make-component",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.camelcase": "^4.3.0",
+    "lodash.kebabcase": "^4.1.1",
+    "lodash.template": "^4.5.0"
+  },
+  "devDependencies": {
+    "@adonisjs/ace": "^5.0.8",
+    "@adonisjs/fold": "^4.0.5",
+    "@netsells/eslint-config": "^4.0.0"
+  }
+}

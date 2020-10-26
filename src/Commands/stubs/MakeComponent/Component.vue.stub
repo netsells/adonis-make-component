@@ -1,0 +1,24 @@
+<template>
+    <div class="<%- kebabName %>">
+        <%- pascalName %>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: '<%- kebabName %>',
+        <% if (props.length) { %>
+        props: {<% props.forEach(({ name, types, propValue }) => { %>
+            <%- name %>: {
+                type: <%- types.length > 1 ? `[${ types.join(', ') }]` : types[0] %>,
+                default: <%= propValue %>,
+            },
+        <% }) %>},<% } %>
+    };
+</script>
+
+<style lang="scss" scoped>
+    .<%- kebabName %> {
+
+    }
+</style>
