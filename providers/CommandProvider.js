@@ -4,22 +4,14 @@ const { ServiceProvider } = require.main.require('@adonisjs/fold');
 
 class CommandProvider extends ServiceProvider {
     /**
-     * Register command bindings
-     *
-     * @method register
-     *
-     * @return {void}
+     * Register command bindings.
      */
     register() {
         this.app.bind('Adonis/Commands/Make:Component', () => require('../src/Commands/MakeComponent'));
     }
 
     /**
-     * Add commands to Ace
-     *
-     * @method boot
-     *
-     * @return {void}
+     * Add commands to Ace.
      */
     boot() {
         const ace = require('@adonisjs/ace');
