@@ -18,6 +18,12 @@ export default {
      * @see https://storybook.js.org/docs/vue/essentials/controls#annotation
      */
     argTypes: {},
+    /**
+     * Set any default props data on your component.
+     *
+     * @see https://storybook.js.org/docs/vue/writing-stories/args
+     */
+    args: {},
 };
 
 export const <%- camelName %> = (args = {}, { argTypes = {} }) => ({

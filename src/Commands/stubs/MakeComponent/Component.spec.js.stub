@@ -1,12 +1,13 @@
-import { <%- camelName %> } from './<%- pascalName %>.stories';
-import { mountStory } from '<%- toRoot %>tests/utils';
+import * as <%- pascalName %> from './<%- pascalName %>.stories';
+import { mountStory } from '@netsells/vue-storybook-test-utils';
 import { componentRendersWithoutErrors } from '<%- toRoot %>tests/suites/without-errors';
 
+const suite = generateSuite(<%- pascalName %>);
+
 describe('<%- pascalName %>', () => {
-    componentRendersWithoutErrors(<%- camelName %>);
     <% props.forEach(({ name }) => { %>
     test('renders <%- name %> prop', () => {
-        const wrapper = mountStory(<%- camelName %>);
+        const wrapper = suite.<%- camelName %>();
 
         expect(false).toBe(true);
     });
