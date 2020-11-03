@@ -1,6 +1,5 @@
 import * as <%- pascalName %> from './<%- pascalName %>.stories';
-import { mountStory } from '@netsells/vue-storybook-test-utils';
-import { componentRendersWithoutErrors } from '<%- toRoot %>tests/suites/without-errors';
+import { generateSuite } from '@netsells/vue-storybook-test-utils';
 
 const suite = generateSuite(<%- pascalName %>);
 
