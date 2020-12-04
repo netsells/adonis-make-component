@@ -24,6 +24,14 @@ export default {
      * @see https://storybook.js.org/docs/vue/writing-stories/args
      */
     args: {},
+    /**
+     * Set any default parameters on your stories.
+     *
+     * @see https://storybook.js.org/docs/vue/writing-stories/parameters
+     */
+    parameters: {
+        jest: '<%- pascalName %>',
+    },
 };
 
 export const <%- camelName %> = (args = {}, { argTypes = {} }) => ({

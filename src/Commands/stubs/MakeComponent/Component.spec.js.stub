@@ -5,10 +5,8 @@ const suite = generateSuite(<%- pascalName %>);
 
 describe('<%- pascalName %>', () => {
     <% props.forEach(({ name }) => { %>
-    test('renders <%- name %> prop', () => {
-        const wrapper = suite.<%- camelName %>();
-
-        expect(false).toBe(true);
+    describe('when the <%- name %> prop is provided', () => {
+        test.todo('something appropriate happens');
     });
     <% }) %>
 });
