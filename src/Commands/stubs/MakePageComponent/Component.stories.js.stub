@@ -1,0 +1,58 @@
+/**
+ * Stories for <%- pascalName %>.
+ *
+ * @see https://storybook.js.org/docs/vue/essentials/controls
+ */
+
+import <%- pascalName %> from './<%- pascalName %>';
+
+export default {
+    /**
+     * Set the component on the default export for props to be
+     * automatically converted to args/controls.
+     */
+    component: <%- pascalName %>,
+    /**
+     * Provide custom control types for your props.
+     *
+     * @see https://storybook.js.org/docs/vue/essentials/controls#annotation
+     */
+    argTypes: {},
+    /**
+     * Set any default props data on your component.
+     *
+     * @see https://storybook.js.org/docs/vue/writing-stories/args
+     */
+    args: {},
+    /**
+     * Set any default parameters on your stories.
+     *
+     * @see https://storybook.js.org/docs/vue/writing-stories/parameters
+     */
+    parameters: {
+        jest: '<%- pascalName %>',
+    },
+};
+
+export const <%- camelName %> = (args = {}, { argTypes = {} }) => ({
+    props: Object.keys({ ...args, ...argTypes }),
+    <% if (asyncData) { %>
+    components: {
+        <%- pascalName %>: {
+            ...<%- pascalName %>,
+            mixins: [{
+                data() {
+                    return {
+                        // Return data here to mock `asyncData` response
+                    };
+                },
+            }],
+        },
+    },
+    <% } else { %>
+    components: { <%- pascalName %> },
+    <% } %>
+    template: `
+        <<%- kebabName %> v-bind="$props" />
+    `,
+});

@@ -1,0 +1,17 @@
+<template>
+    <div class="<%- kebabName %>">
+        <%- pascalName %>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: '<%- kebabName %>',
+    };
+</script>
+
+<style lang="scss" scoped>
+    .<%- kebabName %> {
+
+    }
+</style>

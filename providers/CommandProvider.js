@@ -8,6 +8,7 @@ class CommandProvider extends ServiceProvider {
      */
     register() {
         this.app.bind('Adonis/Commands/Make:Component', () => require('../src/Commands/MakeComponent'));
+        this.app.bind('Adonis/Commands/Make:PageComponent', () => require('../src/Commands/MakePageComponent'));
     }
 
     /**
@@ -17,6 +18,7 @@ class CommandProvider extends ServiceProvider {
         const ace = require('@adonisjs/ace');
 
         ace.addCommand('Adonis/Commands/Make:Component');
+        ace.addCommand('Adonis/Commands/Make:PageComponent');
     }
 }
 
