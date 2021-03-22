@@ -9,7 +9,7 @@
         "lodash.template": "^4.5.0"
     },
     "devDependencies": {
-        "@adonisjs/ace": "^5.0.8",
+        "@adonisjs/ace": "^6.8.4",
         "@adonisjs/fold": "^4.0.5",
         "@netsells/eslint-config": "^5.0.0"
     },
