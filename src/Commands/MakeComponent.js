@@ -87,6 +87,8 @@ class MakeComponent extends Command {
             this.generateTemplates();
 
             this.success(`${ componentName } scaffolding created successfully at [${ this.path }].`);
+
+            process.exit(1);
         } catch (e) {
             this.error(e);
         }
