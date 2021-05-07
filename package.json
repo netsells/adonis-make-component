@@ -10,7 +10,7 @@
     },
     "devDependencies": {
         "@adonisjs/ace": "^5.0.8",
-        "@adonisjs/fold": "^4.0.5",
+        "@adonisjs/fold": "^8.1.2",
         "@netsells/eslint-config": "^5.0.0"
     },
     "repository": {
