@@ -11,7 +11,7 @@
     "devDependencies": {
         "@adonisjs/ace": "^5.0.8",
         "@adonisjs/fold": "^4.0.5",
-        "@netsells/eslint-config": "^5.0.0"
+        "@netsells/eslint-config": "^5.1.0"
     },
     "repository": {
         "url": "https://github.com/netsells/adonis-make-component"
